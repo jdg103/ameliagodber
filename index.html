@@ -5,65 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Godber</title>
     <style>
-        body {
-            background-color: #1a1a1a;
-            color: #f4f4f4;
-            font-family: 'Inter', -apple-system, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
+    body {
+        background-color: #1a1a1a;
+        color: #f4f4f4;
+        font-family: 'Inter', -apple-system, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+    }
 
-        .container {
-            max-width: 600px;
-            padding: 20px;
-            /* Flexbox ensures equal spacing between all direct children */
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem; 
-        }
+    .container {
+        display: flex;
+        flex-direction: column;
+        /* THIS IS THE KEY: Adjust this number to change the gap between ALL items */
+        gap: 1.5rem; 
+        max-width: 600px;
+        padding: 20px;
+    }
 
-        h1, p {
-            margin: 0; /* This removes the unequal browser gaps */
-        }
+    /* This strips away all the hidden "unequal" spacing browsers add by default */
+    h1, p, a {
+        margin: 0 !important;
+        padding: 0 !important;
+        line-height: 1.2;
+    }
 
-        h1 {
-            font-weight: 300;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            font-size: 1.3rem;
-        }
+    h1 {
+        font-weight: 300;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+    }
 
-        p {
-            font-size: 0.9rem;
-            opacity: 0.7;
-            line-height: 1.6;
-        }
+    p {
+        font-size: 0.85rem;
+        opacity: 0.6;
+    }
 
-        .link-container {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem; /* Tighter gap specifically for the link and the follow-up text */
-        }
+    .link {
+        color: #f4f4f4;
+        text-decoration: none;
+        border-bottom: 1px solid #444;
+        padding-bottom: 2px;
+        align-self: center;
+        transition: border-color 0.3s ease;
+    }
 
-        .link {
-            color: #f4f4f4;
-            text-decoration: none;
-            border-bottom: 1px solid #444;
-            padding-bottom: 2px;
-            align-self: center;
-            transition: border-color 0.3s ease;
-        }
+    .link:hover {
+        border-bottom-color: #f4f4f4;
+    }
+</style>
 
-        .link:hover {
-            border-bottom-color: #f4f4f4;
-        }
-    </style>
-</head>
 <body>
+    <div class="container">
+        <h1>Amelia Godber</h1>
+        <p>For more information, or to contact us, please visit</p>
+        <a class="link" href="https://jamesgodber.com">jamesgodber.com</a>
+        <p>and use the Contact link.</p>
+    </div>
+</body>
     <div class="container">
         <h1>Amelia Godber</h1> 
         
